@@ -2,7 +2,7 @@ class CircleCmd < Formula
   desc "Use CircleCI from the command-line."
   homepage "https://github.com/fiskeben/circle-cmd"
   url "https://github.com/fiskeben/circle-cmd/archive/0.5.0.tar.gz"
-  sha256 "c50451fac53eae7940a8e922cc3d8e313eb1ebadaab837e1cedff15f013485df"
+  sha256 "4c9d0afb6ec7ffaf58f864f33f56c298ba91653a820f766f548180df5d66eaf7"
 
   def install
     prefix.install Dir["*.rb"] - ["test.rb"]
