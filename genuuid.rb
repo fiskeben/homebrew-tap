@@ -3,8 +3,8 @@ require "language/go"
 class Genuuid < Formula
   desc "Quickly generate a UUID and copy it to the clipboard"
   homepage "https://github.com/fiskeben/genuuid"
-  url "https://github.com/fiskeben/genuuid/archive/1.0.0.tar.gz"
-  sha256 "882b6f4b663e0ab3d27d0a0e164c68c18c588b783468b30c6d5d2045bb95f38a"
+  url "https://github.com/fiskeben/genuuid/archive/1.0.1.tar.gz"
+  sha256 "b13f83f72549e3c74a3f6e43b738fa71b37ec9227cc4426e7493500de1b60b35"
   depends_on "go" => :build
 
   def install
