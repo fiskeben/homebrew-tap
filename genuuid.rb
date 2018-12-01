@@ -10,8 +10,8 @@ class Genuuid < Formula
   def install
     mkdir_p buildpath/"src/github.com/fiskeben"
     ln_s buildpath, buildpath/"src/github.com/fiskeben/genuuid"
-    system "make", "macos"
-    bin.install_symlink prefix/'genuuid-darwin-1.0.0' => "genuuid"
+    system "go", "build", "-o", "genuuid"
+    bin.install_symlink prefix/'genuuid'
   end
 
   test do
