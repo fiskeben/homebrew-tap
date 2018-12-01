@@ -8,10 +8,12 @@ class Genuuid < Formula
   depends_on "go" => :build
 
   def install
-    mkdir_p buildpath/"src/github.com/fiskeben"
-    ln_s buildpath, buildpath/"src/github.com/fiskeben/genuuid"
-    system "go", "build", "-o", "genuuid"
-    bin.install_symlink prefix/'genuuid'
+    ENV["GOPATH"] = buildpath
+    bin_path = buildpath/"src/github.com/fiskeben/genuuid"
+    bin_path.install Dir["*"]
+    cd bin_path do
+      system "go", "build", "-o", bin/"genuuid", "."
+    end
   end
 
   test do
